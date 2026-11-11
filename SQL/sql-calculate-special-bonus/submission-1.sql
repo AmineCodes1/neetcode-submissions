@@ -1,0 +1,6 @@
+SELECT employee_id,
+(case when employee_id%2=1 and left(name,1)!='M' then salary
+ else 0 end) 
+as bonus
+ FROM employees
+ order by employee_id;
